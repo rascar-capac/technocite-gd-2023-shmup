@@ -13,6 +13,7 @@ public class ShootingController : MonoBehaviour
     [SerializeField] private int _trailSegmentCount = 10;
     [SerializeField] private Transform _fxContainer;
     [SerializeField] private float _shootingPeriod = 0.5f;
+    [SerializeField] private GameManager _gameManager;
 
     private float _nextShootingTime;
     private bool _isShooting;
@@ -46,6 +47,7 @@ public class ShootingController : MonoBehaviour
             if(LayerMask.LayerToName(hitObject.layer) == "Destructible")
             {
                 Destroy(hitObject);
+                _gameManager.IncreaseScore(1);
             }
 
             _muzzleFlash.Play();
