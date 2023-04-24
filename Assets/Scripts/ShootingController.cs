@@ -44,7 +44,7 @@ public class ShootingController : MonoBehaviour
         {
             GameObject hitObject = hitInfo.collider.gameObject;
 
-            if(LayerMask.LayerToName(hitObject.layer) == "Destructible")
+            if(LayerMask.LayerToName(hitObject.layer) == "Enemy")
             {
                 Destroy(hitObject);
                 _gameManager.IncreaseScore(1);
