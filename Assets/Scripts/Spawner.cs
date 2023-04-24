@@ -8,7 +8,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] private EnemyBehaviour _enemyPrefab;
     [SerializeField] private float _spawnPeriod = 5f;
     [SerializeField] private Transform _enemyContainer;
-    [SerializeField] private Transform _player;
+    [SerializeField] private LifeHolder _player;
 
     private List<Transform> _spawnPositions = new List<Transform>();
     private float _nextSpawnTime;

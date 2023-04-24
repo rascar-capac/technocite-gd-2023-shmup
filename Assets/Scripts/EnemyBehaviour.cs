@@ -5,14 +5,20 @@ public class EnemyBehaviour : MonoBehaviour
 {
     // -- FIELDS
 
-    private Transform _player;
+    private LifeHolder _player;
     private NavMeshAgent _navMeshAgent;
+    private float _damagePercentagePerSecond = 0.1f;
 
     // -- METHODS
 
-    public void Initialize(Transform player)
+    public void Initialize(LifeHolder player)
     {
         _player = player;
+    }
+
+    public void HurtPlayer()
+    {
+        _player.Hurt(_damagePercentagePerSecond * Time.deltaTime);
     }
 
     // -- UNITY
@@ -24,6 +30,6 @@ public class EnemyBehaviour : MonoBehaviour
 
     private void Update()
     {
-        _navMeshAgent.SetDestination(_player.position);
+        _navMeshAgent.SetDestination(_player.transform.position);
     }
 }
