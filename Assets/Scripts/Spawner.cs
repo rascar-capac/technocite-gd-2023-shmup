@@ -5,8 +5,9 @@ public class Spawner : MonoBehaviour
 {
     // -- FIELDS
 
+    [SerializeField] private AnimationCurve _spawnPeriodCurve;
+    [SerializeField] private float _maxSpawnTimeInSeconds = 120f;
     [SerializeField] private EnemyBehaviour _enemyPrefab;
-    [SerializeField] private float _spawnPeriod = 5f;
     [SerializeField] private Transform _enemyContainer;
     [SerializeField] private Transform _player;
 
@@ -20,7 +21,7 @@ public class Spawner : MonoBehaviour
         if(Time.time >= _nextSpawnTime)
         {
             SpawnEnemy();
-            _nextSpawnTime = Time.time + _spawnPeriod;
+            _nextSpawnTime = Time.time + _spawnPeriodCurve.Evaluate(Time.time / _maxSpawnTimeInSeconds);
         }
     }
 

@@ -162,8 +162,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb3fc4bf44d68b24db3ec1818d01c5be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _spawnPeriodCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -0.9
+      outSlope: -0.9
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0.1
+      inSlope: -0.9
+      outSlope: -0.9
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _maxSpawnTimeInSeconds: 120
   _enemyPrefab: {fileID: 9046272527420079739, guid: 5855fd0f07d448449a18ebc0c41efedd, type: 3}
-  _spawnPeriod: 5
   _enemyContainer: {fileID: 258233409}
   _player: {fileID: 1805123621}
 --- !u!4 &59814569
