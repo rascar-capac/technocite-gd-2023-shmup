@@ -20,6 +20,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 123063519412588552, guid: 5855fd0f07d448449a18ebc0c41efedd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 123063519412588552, guid: 5855fd0f07d448449a18ebc0c41efedd, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
@@ -75,8 +79,20 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5378093624877503798, guid: 5855fd0f07d448449a18ebc0c41efedd, type: 3}
+      propertyPath: m_Center.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6123644139592961725, guid: 5855fd0f07d448449a18ebc0c41efedd, type: 3}
       propertyPath: m_Speed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6123644139592961725, guid: 5855fd0f07d448449a18ebc0c41efedd, type: 3}
+      propertyPath: m_Height
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6123644139592961725, guid: 5855fd0f07d448449a18ebc0c41efedd, type: 3}
+      propertyPath: m_Radius
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6123644139592961725, guid: 5855fd0f07d448449a18ebc0c41efedd, type: 3}
@@ -87,6 +103,18 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1c09ab3ce42d0be4d85bc478ca6f7493, type: 2}
+    - target: {fileID: 9046272527420079739, guid: 5855fd0f07d448449a18ebc0c41efedd, type: 3}
+      propertyPath: _scoreWhenKilled
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046272527420079739, guid: 5855fd0f07d448449a18ebc0c41efedd, type: 3}
+      propertyPath: _bearableHitCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046272527420079739, guid: 5855fd0f07d448449a18ebc0c41efedd, type: 3}
+      propertyPath: _damagePercentagePerSecond
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 9051866116738447694, guid: 5855fd0f07d448449a18ebc0c41efedd, type: 3}
       propertyPath: m_Name
       value: Elite

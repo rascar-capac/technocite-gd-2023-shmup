@@ -13,7 +13,6 @@ public class ShootingController : MonoBehaviour
     [SerializeField] private int _trailSegmentCount = 10;
     [SerializeField] private Transform _fxContainer;
     [SerializeField] private float _shootingPeriod = 0.5f;
-    [SerializeField] private GameManager _gameManager;
 
     private float _nextShootingTime;
     private bool _isShooting;
@@ -44,10 +43,9 @@ public class ShootingController : MonoBehaviour
         {
             GameObject hitObject = hitInfo.collider.gameObject;
 
-            if(LayerMask.LayerToName(hitObject.layer) == "Enemy")
+            if(LayerMask.LayerToName(hitObject.layer) == "Enemy" && hitObject.TryGetComponent(out EnemyBehaviour enemy))
             {
-                Destroy(hitObject);
-                _gameManager.IncreaseScore(1);
+                enemy.TakeHit();
             }
 
             _muzzleFlash.Play();

@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 59814569}
   - component: {fileID: 59814568}
   m_Layer: 0
-  m_Name: SpawnPositions
+  m_Name: Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -273,9 +273,12 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   _maxSpawnTimeInSeconds: 120
-  _enemyPrefab: {fileID: 9046272527420079739, guid: 5855fd0f07d448449a18ebc0c41efedd, type: 3}
+  _simpleEnemyPrefab: {fileID: 9046272527420079739, guid: 5855fd0f07d448449a18ebc0c41efedd, type: 3}
+  _eliteEnemyPrefab: {fileID: 8424795831385443063, guid: 78cad485de1649741894670839a9c34e, type: 3}
+  _eliteProbabilityRatio: 0.1
   _enemyContainer: {fileID: 258233409}
   _player: {fileID: 1911504193}
+  _gameManager: {fileID: 1638396959}
 --- !u!4 &59814569
 Transform:
   m_ObjectHideFlags: 0
